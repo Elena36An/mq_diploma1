@@ -20,6 +20,7 @@
 .header_content {
   display: flex;
   width: 70.2%;
+  max-width: 1200px;
   padding-top:2%;
   align-items: center;
   justify-content: space-between;
@@ -90,11 +91,25 @@
   flex-wrap: wrap;
   
 } 
+
+
+.trends_content::after {
+  content: "";
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 60%;
+  z-index: 1;
+}
 .trends_title {
   text-align: center;
   font-size: 125%;
   font-family: OpenSans-Bold;
   padding-top: 3.77%;
+  text-transform: uppercase;
   
 }
 
@@ -116,10 +131,11 @@
 
 .trends {
   width:100%;
+
 }
 .trends_conteiner {
   display: flex;
-
+  position: relative;
 }
 
 .trends_content {
@@ -338,11 +354,14 @@
     }
   }
 
+  
+
   .cards {
     width: 72.33% ;
     margin-right: auto;
     margin-left: auto;
     border: 1px solid red;
+    max-width: 1200px;
   }
   .cards_wrapper {
     display: flex;
@@ -353,6 +372,7 @@
   .main {
     width: 77.11%;
     border: 1px solid green;
+    margin-right: 17.5%;
     
   }
   .card {
@@ -361,23 +381,16 @@
     border: 1px solid red;
     margin-bottom: 6.68%;
   }
-  .main_card_img {
-    width: 49.6%;
-    
   
-  }
-
   .main_img {
     max-width: 100%;
     min-height: 292px;
+    display: block;
   }
 
   .card_content {
     width: 63.4%;
     border: 2px solid blue;
-    padding-right: 17.5%;
-    flex-grow: 1;  
-    box-sizing: border-box;
     margin-left: 3.37%;
     min-height: 219px;
   }
@@ -422,6 +435,10 @@
   
 }
 
+  .date_name {
+    width: 
+  }
+
   .maine_name {
   font-family: OpenSans-Bold;
   font-size: 75%;
@@ -429,6 +446,7 @@
   text-decoration: none;
 }
 
+  
 
   .card_main {
     font-family: OpenSans-Regular;
@@ -440,14 +458,9 @@
 
 .aside {
     width: 22.89%;
+    max-width: 270px;
+    border: 1px solid black;
   }
-
-.posts-search {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .section_title {
   margin-bottom: 40px;
   text-align: center;
@@ -456,13 +469,63 @@
   font-size: 14px;
   color: #0f0d0e;
 }
-
 .section_title::after {
   content: "";
   display: block;
   width: 70px;
   height: 3px;
   background-color: #e1d9bd;
-  margin-left: 100px;
+  margin-right: auto;
+  margin-left: auto; 
   margin-top: 13px;
 }
+.posts-search-item {
+ display: flex;
+ position: relative;
+ border: 1px solid red;  
+}
+.posts-search-item:nth-child(n+2) {
+  margin-top: 7.4%;
+}
+.posts-search-media {
+  border: 1px solid blue;
+}
+.posts-search-image {
+ width: 100%;
+ min-height: 70px;
+ display: block;
+}
+.posts-search-content {
+  width: 66.66%;
+  padding-left: 7.42%;
+  max-height: 70px;
+}
+.posts-search-date {
+  color: #989898;
+  font-family: OpenSans-Regular;
+  font-size: 70%; 
+}
+.posts-search-link {
+  font-size: 87.5%;
+  text-decoration: none;
+  color: #000000;
+  font-family: OpenSans-Bold;
+  text-transform: uppercase;
+}
+
+.posts-search-form {
+  display: flex;
+  margin-top: 22.22%;
+}
+
+.posts-search-input {
+  padding-top: 6.66%;
+  padding-bottom: 6.66%;
+  background-color: #f4f7f6; 
+  border: none;
+  font-family: OpenSans-Regular;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #000000;  
+}
+
